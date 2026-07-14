@@ -1,0 +1,12 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    extends: ["local>TryGhost/renovate-config"],
+    packageRules: [
+        {
+            description: "Require manual review for Mint CLI updates because Mint defines documentation validation behavior",
+            matchManagers: ["npm"],
+            matchPackageNames: ["mint"],
+            automerge: false,
+        },
+    ],
+}
